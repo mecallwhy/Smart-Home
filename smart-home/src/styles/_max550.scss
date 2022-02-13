@@ -1,0 +1,36 @@
+@media screen and (max-width: 550px){
+    body{
+        .App{
+            #main-header{
+                font-size: 70px;
+            }
+            #main-grid{
+                grid-template: auto auto / 90vw;
+                padding-top: 150px;
+                justify-content: center;
+
+                #devices-grid{
+                    grid-template: auto / 95vw;
+
+                    .device{
+                        height: 50px;
+                        width: 90%;
+                        margin: 10px 10px 25px 10px;
+                        border-radius: 10px;
+                        flex-direction: row;
+                        justify-content: space-around;
+
+                        img{
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                #device-details{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+            }
+        }
+    }
+}

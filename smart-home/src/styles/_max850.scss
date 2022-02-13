@@ -1,0 +1,16 @@
+@media screen and (max-width: 850px){
+    body{
+        .App{
+            #main-header{
+                font-size: 130px;
+            }
+            #main-grid{
+                grid-template: auto / 50% 50%;
+
+                #devices-grid{
+                    grid-template: auto / 100%;
+                }
+            }
+        }
+    }
+}

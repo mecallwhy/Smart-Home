@@ -1,0 +1,269 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ebebeb;
+  margin: 0;
+  height: 100%;
+}
+
+body .App .connected {
+  background-color: #67d851;
+}
+
+body .App .poorConnection {
+  background-color: #fcff50;
+}
+
+body .App .disconnected {
+  background-color: #d85151;
+}
+
+body .App #main-header {
+  cursor: default;
+  font-size: 230px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+  color: rgba(194, 194, 194, 0.808);
+  z-index: 1;
+}
+
+body .App #main-grid {
+  height: 100%;
+  width: 90%;
+  max-width: 1500px;
+  padding-top: 300px;
+  margin: 0 auto 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 75% 25%;
+      grid-template: auto / 75% 25%;
+}
+
+body .App #main-grid #devices-grid {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template: auto / 33% 33% 33%;
+}
+
+body .App #main-grid #devices-grid .device {
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  margin: 20px 20px 50px 20px;
+  border-radius: 20%;
+  justify-self: center;
+  -webkit-box-shadow: 7px 7px 15px black;
+          box-shadow: 7px 7px 15px black;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+}
+
+body .App #main-grid #devices-grid .device:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 10px 10px 15px black;
+          box-shadow: 10px 10px 15px black;
+}
+
+body .App #main-grid #devices-grid .device img {
+  width: 110px;
+  height: 110px;
+}
+
+body .App #main-grid #devices-grid .device h3 {
+  margin: 0;
+}
+
+body .App #main-grid #device-details {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  background-color: #b4b4b4;
+  height: 270px;
+  width: 220px;
+  z-index: 3;
+  border-radius: 10px;
+  -webkit-box-shadow: 7px 7px 15px black;
+          box-shadow: 7px 7px 15px black;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+  -ms-touch-action: none;
+      touch-action: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+body .App #main-grid #device-details #device-details-generals {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px auto 50px;
+      grid-template-columns: 50px auto 50px;
+  margin: 10px;
+}
+
+body .App #main-grid #device-details #device-details-generals img {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  height: 40px;
+}
+
+body .App #main-grid #device-details #device-details-generals #img-deviceType {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+body .App #main-grid #device-details #device-details-generals #img-close {
+  cursor: pointer;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+}
+
+body .App #main-grid #device-details #device-details-generals p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 10px 0 0 0;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+body .App #main-grid #device-details #device-details-info {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  background-color: #979797;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+body .App #main-grid #device-details #device-details-info p {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+body .App #main-grid #device-details #device-details-info p div {
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 1080px) {
+  body .App #main-header {
+    font-size: 200px;
+  }
+  body .App #main-grid {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 66% 34%;
+        grid-template: auto / 66% 34%;
+  }
+  body .App #main-grid #devices-grid {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template: auto / 50% 50%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body .App #main-header {
+    font-size: 130px;
+  }
+  body .App #main-grid {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template: auto / 50% 50%;
+  }
+  body .App #main-grid #devices-grid {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 100%;
+        grid-template: auto / 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body .App #main-header {
+    font-size: 70px;
+  }
+  body .App #main-grid {
+    -ms-grid-rows: auto auto;
+    -ms-grid-columns: 90vw;
+        grid-template: auto auto / 90vw;
+    padding-top: 150px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .App #main-grid #devices-grid {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 95vw;
+        grid-template: auto / 95vw;
+  }
+  body .App #main-grid #devices-grid .device {
+    height: 50px;
+    width: 90%;
+    margin: 10px 10px 25px 10px;
+    border-radius: 10px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  body .App #main-grid #devices-grid .device img {
+    width: 40px;
+    height: 40px;
+  }
+  body .App #main-grid #device-details {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+/*# sourceMappingURL=style.css.map */

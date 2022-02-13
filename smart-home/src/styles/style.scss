@@ -1,0 +1,137 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(235, 235, 235);
+    margin: 0;
+    height: 100% ;
+
+    .App{
+        
+        .connected{
+            background-color: rgb(103, 216, 81);
+        }
+        .poorConnection{
+            background-color: rgb(252, 255, 80);
+        }
+        .disconnected{
+            background-color: rgb(216, 81, 81);
+        }
+
+        #main-header{
+            cursor: default;
+            font-size: 230px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin: 0;
+            color: rgba(194, 194, 194, 0.808);
+            z-index: 1;
+        }
+        #main-grid{
+            height: 100%;
+            width: 90%;
+            max-width: 1500px;
+            padding-top: 300px;
+            margin: 0 auto 0 auto;
+            display: grid;
+            grid-template: auto / 75% 25%;
+
+            #devices-grid{
+                grid-column: 1/2;
+                display: grid;
+                grid-template: auto / 33% 33% 33%;
+
+                .device{
+                    cursor: pointer;
+                    height: 200px;
+                    width: 200px;
+                    margin: 20px 20px 50px 20px;
+                    border-radius: 20%;
+                    justify-self: center;
+                    box-shadow: 7px 7px 15px black;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content:space-evenly;
+                    transition-duration: 200ms;
+    
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: 10px 10px 15px black;
+                    }
+                    img{
+                        width: 110px;
+                        height: 110px;
+                    }
+                    h3{
+                        margin: 0;
+                    }
+                }
+            }
+
+            #device-details{
+                grid-column: 2/3;
+                background-color: rgb(180, 180, 180);
+                height: 270px;
+                width: 220px;
+                z-index: 3;
+                border-radius: 10px;
+                box-shadow: 7px 7px 15px black;
+                display: grid;
+                grid-template-rows: 30% 70%;
+                touch-action: none;
+                user-select: none;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+    
+                #device-details-generals{
+                    grid-row: 1/2;
+                    display: grid;
+                    grid-template-columns: 50px auto 50px;
+                    margin: 10px;
+                    
+                    img{
+                        align-self: start;
+                        height: 40px;
+                    }
+                    #img-deviceType{
+                        justify-self: start;
+                        grid-column: 1/2;
+                    }
+                    #img-close{
+                        cursor: pointer;
+                        justify-self: end;
+                        grid-column: 3/4;
+                    }
+                    p{
+                        font-weight: 600;
+                        font-size: 1.3rem;
+                        align-self: start;
+                        justify-self: center;
+                        margin: 10px 0 0 0;
+                        grid-column: 2/3;
+                    }
+                }
+                #device-details-info{
+                    grid-row: 2/3;
+                    background-color: rgb(151, 151, 151);
+                    margin: 10px;
+                    border-radius: 10px;
+                    padding: 10px;
+    
+                    p{
+                        max-width: max-content;
+
+                        div{
+                            height: 20px;
+                            width: 20px 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@import 'max1080';
+@import 'max850';
+@import 'max550';
